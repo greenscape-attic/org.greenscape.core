@@ -1,0 +1,11 @@
+-buildpath: osgi.core;version=4.3,\
+	osgi.cmpn;version=4.3,\
+	org.eclipse.osgi.services,\
+	org.greenscape.persistence;version=latest
+Export-Package: org.greenscape.core,\
+	org.greenscape.core.service
+Bundle-Version: 0.1.0
+-dsannotations: *
+Private-Package: org.greenscape.core.service.impl,\
+	org.greenscape.core.impl
+Bundle-Activator: org.greenscape.core.impl.Activator
