@@ -31,8 +31,10 @@ public class ServiceImpl implements Service {
 		return (M) persistenceService.findById(clazz, id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public <M extends DocumentModel> List<M> find(Class<M> clazz, Map<String, List<String>> properties) {
+	public <M extends DocumentModel> List<M> find(Class<? extends DocumentModel> clazz,
+			Map<String, List<String>> properties) {
 		Map<String, Object> props = new HashMap<>();
 		Method[] methods = clazz.getDeclaredMethods();
 		for (Method m : methods) {
@@ -83,7 +85,7 @@ public class ServiceImpl implements Service {
 				}
 			}
 		}
-		return persistenceService.findByProperties(clazz, props);
+		return (List<M>) persistenceService.findByProperties(clazz, props);
 	}
 
 	@SuppressWarnings("unchecked")

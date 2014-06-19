@@ -1,11 +1,21 @@
 -buildpath: osgi.core;version=4.3,\
 	osgi.cmpn;version=4.3,\
 	org.eclipse.osgi.services,\
-	org.greenscape.persistence;version=latest
-Export-Package: org.greenscape.core,\
-	org.greenscape.core.service
+	org.greenscape.persistence;version=latest,\
+	com.fasterxml.jackson.core.jackson-core,\
+	com.fasterxml.jackson.core.jackson-databind
+Export-Package:  \
+	org.greenscape.core,\
+	org.greenscape.core.service,\
+	org.greenscape.core.weblet,\
+	org.greenscape.core.model,\
+	org.greenscape.core.weblet.model
 Bundle-Version: 0.1.0
 -dsannotations: *
-Private-Package: org.greenscape.core.service.impl,\
-	org.greenscape.core.impl
+Private-Package:  \
+	org.greenscape.core.service.impl,\
+	org.greenscape.core.impl,\
+	org.greenscape.core.weblet.impl,\
+	org.greenscape.core.model.impl
 Bundle-Activator: org.greenscape.core.impl.Activator
+GS-Model: org.greenscape.core.model.Pagelet

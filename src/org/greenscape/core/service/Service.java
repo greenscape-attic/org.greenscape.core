@@ -10,7 +10,7 @@ public interface Service {
 
 	<M extends DocumentModel> M find(Class<? extends DocumentModel> clazz, String id);
 
-	<M extends DocumentModel> List<M> find(Class<M> clazz, Map<String, List<String>> properties);
+	<M extends DocumentModel> List<M> find(Class<? extends DocumentModel> clazz, Map<String, List<String>> properties);
 
 	<M extends DocumentModel> List<M> find(Class<? extends DocumentModel> clazz, String propertyName, Object value);
 
