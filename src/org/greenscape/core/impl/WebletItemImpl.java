@@ -1,10 +1,10 @@
 package org.greenscape.core.impl;
 
-import java.util.Dictionary;
+import java.util.Map;
 
 import org.greenscape.core.WebletItem;
 import org.osgi.service.cm.ConfigurationException;
-import org.osgi.service.cm.ManagedService;
+import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Reference;
@@ -13,7 +13,7 @@ import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.log.LogService;
 
 @Component(name = WebletItemImpl.FACTORY_DS, configurationPolicy = ConfigurationPolicy.REQUIRE)
-public class WebletItemImpl implements WebletItem, ManagedService {
+public class WebletItemImpl implements WebletItem {
 	public static final String FACTORY_DS = "org.greenscape.core.WebletItem.factory";
 
 	private String id;
@@ -67,8 +67,8 @@ public class WebletItemImpl implements WebletItem, ManagedService {
 		return viewURL;
 	}
 
-	@Override
-	public void updated(Dictionary<String, ?> properties) throws ConfigurationException {
+	@Activate
+	public void activate(Map<String, Object> properties) throws ConfigurationException {
 		id = (String) properties.get("id");
 		groupId = (String) properties.get("groupId");
 		bundleId = (Long) properties.get("bundleId");

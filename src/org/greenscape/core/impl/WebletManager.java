@@ -10,14 +10,13 @@ import org.greenscape.core.model.Weblet;
 import org.greenscape.core.service.Service;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.component.annotations.ReferencePolicyOption;
 
-@Component
+//@Component
 public class WebletManager {
 	private final List<WebletItem> weblets = new ArrayList<WebletItem>();
 	private Service service;

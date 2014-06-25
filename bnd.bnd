@@ -15,7 +15,6 @@ Bundle-Version: 0.1.0
 Private-Package:  \
 	org.greenscape.core.service.impl,\
 	org.greenscape.core.impl,\
-	org.greenscape.core.weblet.impl,\
 	org.greenscape.core.model.impl
 Bundle-Activator: org.greenscape.core.impl.Activator
 GS-Model: org.greenscape.core.model.Pagelet
