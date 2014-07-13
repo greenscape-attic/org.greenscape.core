@@ -1,9 +1,11 @@
--buildpath: osgi.core;version=4.3,\
+-buildpath:  \
+	osgi.core;version=4.3,\
 	osgi.cmpn;version=4.3,\
 	org.eclipse.osgi.services,\
 	org.greenscape.persistence;version=latest,\
 	com.fasterxml.jackson.core.jackson-core,\
-	com.fasterxml.jackson.core.jackson-databind
+	com.fasterxml.jackson.core.jackson-databind,\
+	junit.osgi
 Export-Package:  \
 	org.greenscape.core,\
 	org.greenscape.core.service,\
@@ -17,4 +19,6 @@ Private-Package:  \
 	org.greenscape.core.impl,\
 	org.greenscape.core.model.impl
 Bundle-Activator: org.greenscape.core.impl.Activator
-GS-Model: org.greenscape.core.model.Pagelet
+GS-Model: org.greenscape.core.model.Organization,org.greenscape.core.model.Site,org.greenscape.core.model.SiteTemplate,org.greenscape.core.model.Page,org.greenscape.core.model.Pagelet
+Test-Cases:  \
+	org.greenscape.core.OrganizationTest
