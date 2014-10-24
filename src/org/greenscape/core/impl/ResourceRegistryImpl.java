@@ -69,6 +69,24 @@ public class ResourceRegistryImpl implements ResourceRegistry, EventHandler {
 		return Collections.unmodifiableList(filteredResources);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public <M extends Resource> List<M> getResources(Class<M> clazz) {
+		if (clazz == null) {
+			return (List<M>) getResources();
+		}
+		List<M> filteredResources = new ArrayList<M>();
+		for (Resource resource : resources.values()) {
+			Class<?>[] interfaces = resource.getClass().getInterfaces();
+			for (Class<?> cls : interfaces) {
+				if (cls == clazz) {
+					filteredResources.add((M) resource);
+				}
+			}
+		}
+		return Collections.unmodifiableList(filteredResources);
+	}
+
 	@Override
 	public List<Resource> getResources(long bundleId) {
 		List<Resource> filteredResources = new ArrayList<Resource>();
@@ -166,7 +184,7 @@ public class ResourceRegistryImpl implements ResourceRegistry, EventHandler {
 				}
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			logService.log(LogService.LOG_ERROR, e.getMessage(), e);
 		}
 	}
 
@@ -214,6 +232,16 @@ public class ResourceRegistryImpl implements ResourceRegistry, EventHandler {
 
 	private void registerWebletResource(WebletConfig config, Bundle bundle) {
 		WebletResourceImpl resource = new WebletResourceImpl(bundle.getBundleId(), config.name, ResourceType.Weblet);
+		resource.setId(bundle.getSymbolicName() + "." + config.name);
+		resource.setGroupId(bundle.getSymbolicName());
+		resource.setTitle(config.title);
+		resource.setInstanceable(config.instanceable);
+		resource.setIcon(config.icon);
+		resource.setViewURL(config.viewURL);
+		resource.setHelpURL(config.helpURL);
+		resource.setLoadJS(config.loadJS);
+		resource.setLoadCSS(config.loadCSS);
+		resources.put(resource.getName().toLowerCase(), resource);
 		postEvent(TOPIC_RESOURCE_REGISTERED, resource, bundle);
 	}
 

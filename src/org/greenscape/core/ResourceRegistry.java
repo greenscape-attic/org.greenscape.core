@@ -27,6 +27,17 @@ public interface ResourceRegistry {
 	List<Resource> getResources(ResourceType resourceType);
 
 	/**
+	 * Gets the resources of the specified class type
+	 *
+	 * @param clazz
+	 *            The class type of resources to return. If the
+	 *            <code>clazz</code> is null, then this call behaves just like
+	 *            getResources()
+	 * @return the list of resources matching the type
+	 */
+	<M extends Resource> List<M> getResources(Class<M> clazz);
+
+	/**
 	 * Gets all resources registered by the bundle with specified id
 	 *
 	 * @param bundleId

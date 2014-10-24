@@ -27,6 +27,9 @@ public interface Service {
 	@Deprecated
 	<M extends DocumentModel> List<M> find(Class<? extends DocumentModel> clazz, String propertyName, Object value);
 
+	public <M extends DocumentModel> List<M> find(String organizationId, String modelName, String propertyName,
+			Object value);
+
 	@Deprecated
 	<M extends DocumentModel> List<M> find(String organizationId, Class<? extends DocumentModel> clazz,
 			String propertyName, Object value);
@@ -42,10 +45,12 @@ public interface Service {
 
 	<M extends DocumentModel> M save(String modelName, M model);
 
+	@Deprecated
 	<M extends DocumentModel> M save(M model);
 
 	<M extends DocumentModel> M update(String modelName, M model);
 
+	@Deprecated
 	<M extends DocumentModel> M update(M model);
 
 	void delete(String modelName);

@@ -190,6 +190,16 @@ public class ServiceImpl implements Service {
 
 	@SuppressWarnings("unchecked")
 	@Override
+	public <M extends DocumentModel> List<M> find(String organizationId, String modelName, String propertyName,
+			Object value) {
+		Map<String, Object> props = new HashMap<>();
+		props.put(PersistedModel.ORGANIZATION_ID, organizationId);
+		props.put(propertyName, value);
+		return (List<M>) persistenceService.findByProperties(modelName, props);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
 	public <M extends DocumentModel> List<M> find(String organizationId, Class<? extends DocumentModel> clazz,
 			String propertyName, Object value) {
 		Map<String, Object> props = new HashMap<>();

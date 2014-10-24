@@ -241,6 +241,33 @@
 				"inherits":[
 					"MultiTenantModel"
 				],
+				"properties":[
+					{
+						"name":"name",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"homeURL",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"parentSiteId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"active",
+						"type":"java.lang.Boolean"
+					},
+					{
+						"name":"default",
+						"type":"java.lang.Boolean"
+					},
+					{
+						"name":"siteTemplate",
+						"type":"org.greenscape.core.model.SiteTemplateModel"
+					}
+					
+				],
 				"permissions":{
 					"supports":[
 						"VIEW",
@@ -268,9 +295,23 @@
 			"modelResource":{
 				"name":"SiteTemplate",
 				"modelClass":"org.greenscape.core.model.SiteTemplate",
-				"remote":true,
 				"inherits":[
 					"MultiTenantModel"
+				],
+				"properties":[
+					{
+						"name":"URL",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"headerURL",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"footerURL",
+						"type":"java.lang.String"
+					}
+					
 				],
 				"permissions":{
 					"supports":[
@@ -303,7 +344,29 @@
 				"inherits":[
 					"MultiTenantModel"
 				],
-				"remote":true,
+				"properties":[
+					{
+						"name":"name",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"pathURL",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"layoutURL",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"siteId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"active",
+						"type":"java.lang.Boolean"
+					}
+					
+				],
 				"permissions":{
 					"supports":[
 						"VIEW",
@@ -329,6 +392,72 @@
 				},
 				"remote":true,
 				"remoteName":"page"
+			}
+			
+		},
+		{
+			"modelResource":{
+				"name":"Pagelet",
+				"modelClass":"org.greenscape.core.model.Pagelet",
+				"inherits":[
+					"MultiTenantModel"
+				],
+				"properties":[
+					{
+						"name":"pageId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"webletId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"title",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"active",
+						"type":"java.lang.Boolean"
+					},
+					{
+						"name":"row",
+						"type":"java.lang.Integer"
+					},
+					{
+						"name":"column",
+						"type":"java.lang.Integer"
+					},
+					{
+						"name":"order",
+						"type":"java.lang.Integer"
+					}
+					
+				],
+				"permissions":{
+					"supports":[
+						"VIEW",
+						"ADD",
+						"UPDATE",
+						"DELETE",
+						"PERMISSIONS"
+					],
+					"siteMemberDefaults":[
+						"VIEW",
+						"ADD",
+						"UPDATE",
+						"DELETE",
+						"PERMISSIONS"
+					],
+					"guestUnsupported":[
+						"ADD",
+						"UPDATE",
+						"DELETE",
+						"PERMISSIONS"
+					]
+					
+				},
+				"remote":true,
+				"remoteName":"pagelet"
 			}
 			
 		}

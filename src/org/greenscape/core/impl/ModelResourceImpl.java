@@ -83,4 +83,9 @@ public class ModelResourceImpl extends ResourceBase implements ModelResource {
 	void addProperty(Property property) {
 		properties.put(property.getName(), property);
 	}
+
+	@Override
+	public String toString() {
+		return getName();
+	}
 }
