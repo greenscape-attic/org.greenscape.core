@@ -1,6 +1,7 @@
 package org.greenscape.core.model;
 
 import java.util.Date;
+import java.util.List;
 
 import org.greenscape.persistence.PersistedModel;
 
@@ -29,6 +30,8 @@ public interface UserModel extends PersistedModel {
 	String AGREED_TO_TERMS_OF_USE = "agreedToTermsOfUse";
 	String EMAIL_ADDRESS_VERIFIED = "emailAddressVerified";
 	String STATUS = "status";
+
+	String ROLES = "roles";
 
 	Long getUserId();
 
@@ -117,4 +120,8 @@ public interface UserModel extends PersistedModel {
 	Integer getStatus();
 
 	UserModel setStatus(Integer status);
+
+	List<String> getRoles();
+
+	UserModel setRoles(List<String> roles);
 }

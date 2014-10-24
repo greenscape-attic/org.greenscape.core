@@ -29,4 +29,36 @@ public class Permission extends PersistedModelBase implements PermissionModel {
 		return this;
 	}
 
+	@Override
+	public String getOwnerId() {
+		return (String) getProperty(OWNER_ID);
+	}
+
+	@Override
+	public PermissionModel setOwnerId(String ownerId) {
+		setProperty(OWNER_ID, ownerId);
+		return this;
+	}
+
+	@Override
+	public String getRoleId() {
+		return (String) getProperty(ROLE_ID);
+	}
+
+	@Override
+	public PermissionModel setRoleId(String roleId) {
+		setProperty(ROLE_ID, roleId);
+		return this;
+	}
+
+	@Override
+	public Long getActionIds() {
+		return (Long) getProperty(ACTIONS_ID);
+	}
+
+	@Override
+	public Permission setActionIds(Long actionIds) {
+		setProperty(ACTIONS_ID, actionIds);
+		return this;
+	}
 }

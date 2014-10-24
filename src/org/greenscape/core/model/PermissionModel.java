@@ -1,17 +1,20 @@
 /**
- * 
+ *
  */
 package org.greenscape.core.model;
 
 /**
  * @author Sheikh Sajid
- * 
+ *
  */
 public interface PermissionModel {
 
 	String MODEL_NAME = "Permission";
 	String NAME = "name";
 	String SCOPE = "scope";
+	String ROLE_ID = "roleId";
+	String OWNER_ID = "ownerId";
+	String ACTIONS_ID = "actionIds";
 
 	String getName();
 
@@ -21,7 +24,37 @@ public interface PermissionModel {
 
 	PermissionModel setScope(Integer scope);
 
-	// String getActionId();
+	/**
+	 * Returns the role ID of this resource permission.
+	 *
+	 * @return the role ID of this resource permission
+	 */
+	public String getRoleId();
 
-	// Permission setActionId(String actionId);
+	/**
+	 * Sets the role ID of this resource permission.
+	 *
+	 * @param roleId
+	 *            the role ID of this resource permission
+	 */
+	public PermissionModel setRoleId(String roleId);
+
+	/**
+	 * Returns the owner ID of this resource permission.
+	 *
+	 * @return the owner ID of this resource permission
+	 */
+	public String getOwnerId();
+
+	/**
+	 * Sets the owner ID of this resource permission.
+	 *
+	 * @param ownerId
+	 *            the owner ID of this resource permission
+	 */
+	public PermissionModel setOwnerId(String ownerId);
+
+	Long getActionIds();
+
+	Permission setActionIds(Long actionIds);
 }

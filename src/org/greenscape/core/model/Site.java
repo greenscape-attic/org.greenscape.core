@@ -4,18 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.greenscape.persistence.PersistedModelBase;
-import org.greenscape.persistence.annotations.Model;
 
 /**
- * 
+ *
  * @author Sheikh Sajid
- * 
+ *
  */
-@Model(name = SiteModel.MODEL_NAME)
 public class Site extends PersistedModelBase implements SiteModel {
 	private static final long serialVersionUID = -9043603752002266014L;
 
-	private final List<Page> pages = new ArrayList<>();
+	private final List<PageModel> pages = new ArrayList<>();
 
 	@Override
 	public String getName() {
@@ -83,7 +81,8 @@ public class Site extends PersistedModelBase implements SiteModel {
 		return this;
 	}
 
-	public List<Page> getPages() {
+	@Override
+	public List<PageModel> getPages() {
 		return pages;
 	}
 }

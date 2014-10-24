@@ -1,23 +1,16 @@
 package org.greenscape.core.model;
 
 import org.greenscape.persistence.PersistedModelBase;
-import org.greenscape.persistence.annotations.Model;
 
 /**
  * 
  * @author Sheikh Sajid
  * 
  */
-@Model(name = OrganizationModel.MODEL_NAME)
 public class Organization extends PersistedModelBase implements OrganizationModel {
 	private static final long serialVersionUID = -2392049292137025175L;
 
 	public Organization() {
-		getPropertyNames().add(NAME);
-		getPropertyNames().add(HOME_URL);
-		getPropertyNames().add(LOGO_ID);
-		getPropertyNames().add(MAX_USERS);
-		getPropertyNames().add(ACTIVE);
 	}
 
 	public Organization(Organization entity) {

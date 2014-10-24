@@ -7,8 +7,8 @@ import org.greenscape.persistence.PersistedModel;
 
 /**
  * The base model interface for the Organization service. Represents a row in
- * the &quot;Organization&quot; database, with each column mapped to a property
- * of this class.
+ * the &quot;Organization&quot; model, with each column mapped to a property of
+ * this class.
  *
  *
  * @author Sheikh Sajid

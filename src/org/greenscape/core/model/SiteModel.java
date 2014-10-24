@@ -1,5 +1,7 @@
 package org.greenscape.core.model;
 
+import java.util.List;
+
 import org.greenscape.persistence.PersistedModel;
 
 public interface SiteModel extends PersistedModel {
@@ -34,5 +36,7 @@ public interface SiteModel extends PersistedModel {
 	SiteTemplateModel getSiteTemplate();
 
 	SiteModel setSiteTemplate(SiteTemplateModel siteTemplateModel);
+
+	List<PageModel> getPages();
 
 }

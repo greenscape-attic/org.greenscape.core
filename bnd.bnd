@@ -5,7 +5,12 @@
 	org.greenscape.persistence;version=latest,\
 	com.fasterxml.jackson.core.jackson-core,\
 	com.fasterxml.jackson.core.jackson-databind,\
-	junit.osgi
+	junit.osgi,\
+	org.apache.shiro.core,\
+	org.apache.servicemix.bundles.aspectj,\
+	org.apache.shiro.web,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	org.apache.felix.eventadmin
 Export-Package:  \
 	org.greenscape.core,\
 	org.greenscape.core.service,\
@@ -17,8 +22,11 @@ Bundle-Version: 0.1.0
 Private-Package:  \
 	org.greenscape.core.service.impl,\
 	org.greenscape.core.impl,\
-	org.greenscape.core.model.impl
+	org.greenscape.core.model.impl,\
+	org.greenscape.core.impl.config.json
 Bundle-Activator: org.greenscape.core.impl.Activator
-GS-Model: org.greenscape.core.model.Organization,org.greenscape.core.model.Site,org.greenscape.core.model.SiteTemplate,org.greenscape.core.model.Page,org.greenscape.core.model.Pagelet
+GS-Model: org.greenscape.core.model.Organization,org.greenscape.core.model.Permission,org.greenscape.core.model.RoleEntity,org.greenscape.core.model.UserEntity,org.greenscape.core.model.Site,org.greenscape.core.model.SiteTemplate,org.greenscape.core.model.Page,org.greenscape.core.model.Pagelet
+GS-Resource: META-INF/resources.json
 Test-Cases:  \
 	org.greenscape.core.OrganizationTest
+Include-Resource: META-INF=config

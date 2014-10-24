@@ -1,6 +1,7 @@
 package org.greenscape.core.model;
 
 import java.util.Date;
+import java.util.List;
 
 import org.greenscape.persistence.PersistedModelBase;
 import org.greenscape.persistence.annotations.Model;
@@ -11,7 +12,7 @@ public class UserEntity extends PersistedModelBase implements UserModel {
 
 	@Override
 	public Long getUserId() {
-		return (Long) getProperty(USER_ID);
+		return getProperty(Long.class, USER_ID);
 	}
 
 	@Override
@@ -22,7 +23,7 @@ public class UserEntity extends PersistedModelBase implements UserModel {
 
 	@Override
 	public String getUserName() {
-		return (String) getProperty(USER_NAME);
+		return getProperty(String.class, USER_NAME);
 	}
 
 	@Override
@@ -251,4 +252,15 @@ public class UserEntity extends PersistedModelBase implements UserModel {
 		return this;
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<String> getRoles() {
+		return (List<String>) getProperty(ROLES);
+	}
+
+	@Override
+	public UserModel setRoles(List<String> roles) {
+		setProperty(ROLES, roles);
+		return this;
+	}
 }

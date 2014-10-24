@@ -1,13 +1,11 @@
 package org.greenscape.core.model;
 
-import org.greenscape.core.WebletItem;
 import org.greenscape.persistence.PersistedModelBase;
 import org.greenscape.persistence.annotations.Model;
 
 @Model(name = PageletModel.MODEL_NAME)
 public class Pagelet extends PersistedModelBase implements PageletModel {
 	private static final long serialVersionUID = 2546793688926577230L;
-	private WebletItem weblet;
 
 	@Override
 	public String getPageId() {
@@ -86,13 +84,6 @@ public class Pagelet extends PersistedModelBase implements PageletModel {
 		return this;
 	}
 
-	public WebletItem getWeblet() {
-		return weblet;
-	}
-
-	public void setWeblet(WebletItem weblet) {
-		this.weblet = weblet;
-	}
 
 	@Override
 	public String toString() {
@@ -104,7 +95,6 @@ public class Pagelet extends PersistedModelBase implements PageletModel {
 		builder.append(",row:").append(getRow());
 		builder.append(",column:").append(getColumn());
 		builder.append(",order:").append(getOrder());
-		builder.append(",weblet:").append(getWeblet());
 		builder.append("}");
 		return builder.toString();
 	}
