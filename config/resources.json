@@ -118,8 +118,24 @@
 		{
 			"modelResource":{
 				"name":"ResourceAction",
+				"modelClass":"org.greenscape.core.model.ResourceAction",
 				"inherits":[
 					"MultiTenantModel"
+				],
+				"properties":[
+					{
+						"name":"name",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"actionId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"bitwiseValue",
+						"type":"java.lang.Long"
+					}
+					
 				],
 				"permissions":{
 					"supports":[
@@ -147,8 +163,100 @@
 		{
 			"modelResource":{
 				"name":"User",
+				"modelClass":"org.greenscape.core.model.UserEntity",
 				"inherits":[
 					"MultiTenantModel"
+				],
+				"properties":[
+					{
+						"name":"userId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"userName",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"firstName",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"middleName",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"lastName",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"password",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"passwordModifiedDate",
+						"type":"java.util.Date"
+					},
+					{
+						"name":"email",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"passwordReset",
+						"type":"java.lang.Boolean"
+					},
+					{
+						"name":"languageId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"timeZoneId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"loginDate",
+						"type":"java.util.Date"
+					},
+					{
+						"name":"loginIP",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"lastLoginDate",
+						"type":"java.util.Date"
+					},
+					{
+						"name":"lastLoginIP",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"lastFailedLoginDate",
+						"type":"java.util.Date"
+					},
+					{
+						"name":"failedLoginAttempts",
+						"type":"java.lang.Integer"
+					},
+					{
+						"name":"lockout",
+						"type":"java.lang.Boolean"
+					},
+					{
+						"name":"lockoutDate",
+						"type":"java.util.Date"
+					},
+					{
+						"name":"agreedToTermsOfUse",
+						"type":"java.lang.Boolean"
+					},
+					{
+						"name":"emailAddressVerified",
+						"type":"java.lang.Boolean"
+					},
+					{
+						"name":"status",
+						"type":"java.lang.Integer"
+					}
+					
 				],
 				"permissions":{
 					"supports":[
@@ -177,8 +285,32 @@
 		{
 			"modelResource":{
 				"name":"Permission",
+				"modelClass":"org.greenscape.core.model.Permission",
 				"inherits":[
 					"MultiTenantModel"
+				],
+				"properties":[
+					{
+						"name":"name",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"scope",
+						"type":"java.lang.Integer"
+					},
+					{
+						"name":"roleId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"ownerId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"actionIds",
+						"type":"java.lang.Long"
+					}
+					
 				],
 				"permissions":{
 					"supports":[
@@ -206,8 +338,24 @@
 		{
 			"modelResource":{
 				"name":"Role",
+				"modelClass":"org.greenscape.core.model.RoleEntity",
 				"inherits":[
 					"MultiTenantModel"
+				],
+				"properties":[
+					{
+						"name":"roleId",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"name",
+						"type":"java.lang.String"
+					},
+					{
+						"name":"description",
+						"type":"java.lang.String"
+					}
+					
 				],
 				"permissions":{
 					"supports":[
