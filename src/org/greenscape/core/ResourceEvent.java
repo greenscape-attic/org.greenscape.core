@@ -5,11 +5,11 @@ import java.util.EventObject;
 import org.osgi.framework.Bundle;
 
 /**
- * An event from the Framework describing a bundle resource change.
+ * An event from the Greenscape Framework describing a resource change.
  * <p>
  * {@code ResourceEvent} objects are delivered to
  * {@code SynchronousBundleListener}s and {@code BundleListener}s when a change
- * occurs in a bundle's lifecycle. A type code is used to identify the event
+ * occurs in a resource lifecycle. A type code is used to identify the event
  * type for future extendability.
  *
  * <p>
@@ -41,9 +41,14 @@ public class ResourceEvent extends EventObject {
 	public final static int UPDATED = 0x00000002;
 
 	/**
+	 * The resource has been configured.
+	 */
+	public final static int CONFIGURED = 0x00000004;
+
+	/**
 	 * The resource has been unregisterd.
 	 */
-	public final static int UNREGISTERED = 0x00000004;
+	public final static int UNREGISTERED = 0x00000008;
 
 	/**
 	 * Creates a resource event of the specified type.
@@ -68,6 +73,7 @@ public class ResourceEvent extends EventObject {
 	 * <ul>
 	 * <li>{@link #REGISTERED}
 	 * <li>{@link #UPDATED}
+	 * <li>{@link #CONFIGURED}
 	 * <li>{@link #UNREGISTERED}
 	 * </ul>
 	 *

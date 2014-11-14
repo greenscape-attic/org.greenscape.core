@@ -4,6 +4,7 @@ import java.util.List;
 
 public interface ResourceRegistry {
 	String TOPIC_RESOURCE_REGISTERED = "org/greenscape/core/ResourceEvent/REGISTERED";
+	String TOPIC_RESOURCE_CONFIGURED = "org/greenscape/core/ResourceEvent/CONFIGURED";
 	String TOPIC_RESOURCE_UNREGISTERED = "org/greenscape/core/ResourceEvent/UNREGISTERED";
 	String TOPIC_RESOURCE_MODIFIED = "org/greenscape/core/ResourceEvent/MODIFIED";
 

@@ -1,9 +1,11 @@
 package org.greenscape.core.model;
 
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 import org.greenscape.persistence.PersistedModel;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public interface UserModel extends PersistedModel {
 
@@ -41,14 +43,17 @@ public interface UserModel extends PersistedModel {
 
 	UserModel setUserName(String userName);
 
+	@JsonIgnore
 	String getPassword();
 
 	UserModel setPassword(String password);
 
+	@JsonIgnore
 	Boolean isPasswordReset();
 
 	UserModel setPasswordReset(Boolean passwordReset);
 
+	@JsonIgnore
 	Date getPasswordModifiedDate();
 
 	UserModel setPasswordModifiedDate(Date passwordModifiedDate);
@@ -77,42 +82,52 @@ public interface UserModel extends PersistedModel {
 
 	UserModel setTimeZoneId(String timeZoneId);
 
+	@JsonIgnore
 	Date getLoginDate();
 
 	UserModel setLoginDate(Date loginDate);
 
+	@JsonIgnore
 	String getLoginIP();
 
 	UserModel setLoginIP(String loginIP);
 
+	@JsonIgnore
 	Date getLastLoginDate();
 
 	UserModel setLastLoginDate(Date lastLoginDate);
 
+	@JsonIgnore
 	String getLastLoginIP();
 
 	UserModel setLastLoginIP(String lastLoginIP);
 
+	@JsonIgnore
 	Date getLastFailedLoginDate();
 
 	UserModel setLastFailedLoginDate(Date lastFailedLoginDate);
 
+	@JsonIgnore
 	Integer getFailedLoginAttempts();
 
 	UserModel setFailedLoginAttempts(Integer failedLoginAttempts);
 
+	@JsonIgnore
 	Boolean isLockout();
 
 	UserModel setLockout(Boolean lockout);
 
+	@JsonIgnore
 	Date getLockoutDate();
 
 	UserModel setLockoutDate(Date lockoutDate);
 
+	@JsonIgnore
 	Boolean isAgreedToTermsOfUse();
 
 	UserModel setAgreedToTermsOfUse(Boolean agreedToTermsOfUse);
 
+	@JsonIgnore
 	Boolean isEmailAddressVerified();
 
 	UserModel setEmailAddressVerified(Boolean emailAddressVerified);
@@ -121,7 +136,7 @@ public interface UserModel extends PersistedModel {
 
 	UserModel setStatus(Integer status);
 
-	List<String> getRoles();
+	Set<String> getRoles();
 
-	UserModel setRoles(List<String> roles);
+	UserModel setRoles(Set<String> roles);
 }

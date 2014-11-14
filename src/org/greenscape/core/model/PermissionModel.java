@@ -13,6 +13,7 @@ public interface PermissionModel {
 	String NAME = "name";
 	String SCOPE = "scope";
 	String ROLE_ID = "roleId";
+	String TARGET_MODEL_ID = "targetModelId";
 	String OWNER_ID = "ownerId";
 	String ACTIONS_ID = "actionIds";
 
@@ -29,7 +30,7 @@ public interface PermissionModel {
 	 *
 	 * @return the role ID of this resource permission
 	 */
-	public String getRoleId();
+	String getRoleId();
 
 	/**
 	 * Sets the role ID of this resource permission.
@@ -37,14 +38,18 @@ public interface PermissionModel {
 	 * @param roleId
 	 *            the role ID of this resource permission
 	 */
-	public PermissionModel setRoleId(String roleId);
+	PermissionModel setRoleId(String roleId);
+
+	String getTargetModelId();
+
+	PermissionModel setTargetModelId(String targetModelId);
 
 	/**
 	 * Returns the owner ID of this resource permission.
 	 *
 	 * @return the owner ID of this resource permission
 	 */
-	public String getOwnerId();
+	String getOwnerId();
 
 	/**
 	 * Sets the owner ID of this resource permission.
@@ -52,9 +57,9 @@ public interface PermissionModel {
 	 * @param ownerId
 	 *            the owner ID of this resource permission
 	 */
-	public PermissionModel setOwnerId(String ownerId);
+	PermissionModel setOwnerId(String ownerId);
 
 	Long getActionIds();
 
-	Permission setActionIds(Long actionIds);
+	PermissionModel setActionIds(Long actionIds);
 }

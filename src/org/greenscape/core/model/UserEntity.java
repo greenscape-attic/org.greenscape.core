@@ -1,12 +1,10 @@
 package org.greenscape.core.model;
 
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 import org.greenscape.persistence.PersistedModelBase;
-import org.greenscape.persistence.annotations.Model;
 
-@Model(name = UserModel.MODEL_NAME)
 public class UserEntity extends PersistedModelBase implements UserModel {
 	private static final long serialVersionUID = 6930254499438963734L;
 
@@ -254,12 +252,12 @@ public class UserEntity extends PersistedModelBase implements UserModel {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<String> getRoles() {
-		return (List<String>) getProperty(ROLES);
+	public Set<String> getRoles() {
+		return (Set<String>) getProperty(ROLES);
 	}
 
 	@Override
-	public UserModel setRoles(List<String> roles) {
+	public UserModel setRoles(Set<String> roles) {
 		setProperty(ROLES, roles);
 		return this;
 	}

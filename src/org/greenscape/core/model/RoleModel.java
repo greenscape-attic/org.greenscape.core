@@ -11,13 +11,8 @@ import org.greenscape.persistence.PersistedModel;
  */
 public interface RoleModel extends PersistedModel {
 	String MODEL_NAME = "Role";
-	String ROLE_ID = "roleId";
 	String NAME = "name";
 	String DESCRIPTION = "description";
-
-	Long getRoleId();
-
-	RoleModel setRoleId(Long roleId);
 
 	String getName();
 

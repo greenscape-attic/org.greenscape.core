@@ -93,13 +93,32 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
+						"VIEW"
+					],
+					"guestDefaults":[
 						"VIEW"
 					],
 					"guestUnsupported":[
@@ -139,11 +158,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW"
@@ -156,7 +191,8 @@
 					]
 					
 				},
-				"remote":false
+				"remote":true,
+				"remoteName":"resourceaction"
 			}
 			
 		},
@@ -260,11 +296,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW"
@@ -303,6 +355,10 @@
 						"type":"java.lang.String"
 					},
 					{
+						"name":"targetModelId",
+						"type":"java.lang.String"
+					},
+					{
 						"name":"ownerId",
 						"type":"java.lang.String"
 					},
@@ -314,11 +370,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW"
@@ -359,11 +431,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW"
@@ -418,11 +506,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW"
@@ -463,11 +567,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW"
@@ -517,11 +637,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW",
@@ -583,11 +719,27 @@
 				],
 				"permissions":{
 					"supports":[
-						"VIEW",
-						"ADD",
-						"UPDATE",
-						"DELETE",
-						"PERMISSIONS"
+						{
+							"action":"VIEW",
+							"bit":1
+						},
+						{
+							"action":"ADD",
+							"bit":2
+						},
+						{
+							"action":"UPDATE",
+							"bit":4
+						},
+						{
+							"action":"DELETE",
+							"bit":8
+						},
+						{
+							"action":"PERMISSIONS",
+							"bit":16
+						}
+						
 					],
 					"siteMemberDefaults":[
 						"VIEW",

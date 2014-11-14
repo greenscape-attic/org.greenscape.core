@@ -3,7 +3,8 @@
 	osgi.cmpn;version=4.3,\
 	org.eclipse.osgi.services,\
 	org.greenscape.persistence;version=latest,\
-	junit.osgi
+	junit.osgi,\
+	com.fasterxml.jackson.core.jackson-annotations
 Export-Package:  \
 	org.greenscape.core,\
 	org.greenscape.core.service,\
