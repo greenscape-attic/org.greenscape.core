@@ -183,6 +183,9 @@
 					"siteMemberDefaults":[
 						"VIEW"
 					],
+					"guestDefaults":[
+						"VIEW"
+					],
 					"guestUnsupported":[
 						"ADD",
 						"UPDATE",
@@ -321,6 +324,9 @@
 					"siteMemberDefaults":[
 						"VIEW"
 					],
+					"guestDefaults":[
+						"VIEW"
+					],
 					"guestUnsupported":[
 						"ADD",
 						"UPDATE",
@@ -395,6 +401,9 @@
 					"siteMemberDefaults":[
 						"VIEW"
 					],
+					"guestDefaults":[
+						"VIEW"
+					],
 					"guestUnsupported":[
 						"ADD",
 						"UPDATE",
@@ -454,6 +463,9 @@
 						
 					],
 					"siteMemberDefaults":[
+						"VIEW"
+					],
+					"guestDefaults":[
 						"VIEW"
 					],
 					"guestUnsupported":[
@@ -531,6 +543,9 @@
 					"siteMemberDefaults":[
 						"VIEW"
 					],
+					"guestDefaults":[
+						"VIEW"
+					],
 					"guestUnsupported":[
 						"ADD",
 						"UPDATE",
@@ -590,6 +605,9 @@
 						
 					],
 					"siteMemberDefaults":[
+						"VIEW"
+					],
+					"guestDefaults":[
 						"VIEW"
 					],
 					"guestUnsupported":[
@@ -665,6 +683,9 @@
 						"UPDATE",
 						"DELETE",
 						"PERMISSIONS"
+					],
+					"guestDefaults":[
+						"VIEW"
 					],
 					"guestUnsupported":[
 						"ADD",
@@ -747,6 +768,9 @@
 						"UPDATE",
 						"DELETE",
 						"PERMISSIONS"
+					],
+					"guestDefaults":[
+						"VIEW"
 					],
 					"guestUnsupported":[
 						"ADD",
