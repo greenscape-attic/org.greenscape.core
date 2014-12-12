@@ -3,11 +3,13 @@
  */
 package org.greenscape.core.model;
 
+import org.greenscape.persistence.PersistedModel;
+
 /**
  * @author Sheikh Sajid
  *
  */
-public interface PermissionModel {
+public interface PermissionModel extends PersistedModel {
 
 	String MODEL_NAME = "Permission";
 	String NAME = "name";

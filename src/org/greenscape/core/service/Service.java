@@ -14,7 +14,9 @@ public interface Service {
 	@Deprecated
 	<M extends DocumentModel> List<M> find(String organizationId, Class<? extends DocumentModel> clazz);
 
-	<M extends DocumentModel> M find(String modelName, String id);
+	<M extends DocumentModel> M find(String modelName, Object id);
+
+	<M extends DocumentModel> M findByModelId(String modelName, String modelId);
 
 	@Deprecated
 	<M extends DocumentModel> M find(Class<? extends DocumentModel> clazz, String id);

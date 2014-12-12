@@ -18,3 +18,5 @@ GS-Resource: META-INF/resources.json
 Test-Cases:  \
 	org.greenscape.core.OrganizationTest
 Include-Resource: META-INF=config
+javac.source: 1.7
+javac.target: 1.7

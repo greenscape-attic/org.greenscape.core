@@ -537,6 +537,14 @@
 						{
 							"action":"PERMISSIONS",
 							"bit":16
+						},
+						{
+							"action":"ADD_WEBLET",
+							"bit":32
+						},
+						{
+							"action":"DELETE_WEBLET",
+							"bit":64
 						}
 						
 					],
