@@ -15,8 +15,8 @@ Bundle-Version: 0.1.0
 -dsannotations: *
 GS-Model: org.greenscape.core.model.Organization,org.greenscape.core.model.Permission,org.greenscape.core.model.RoleEntity,org.greenscape.core.model.UserEntity,org.greenscape.core.model.Site,org.greenscape.core.model.SiteTemplate,org.greenscape.core.model.Page,org.greenscape.core.model.Pagelet
 GS-Resource: META-INF/resources.json
-Test-Cases:  \
-	org.greenscape.core.OrganizationTest
 Include-Resource: META-INF=config
 javac.source: 1.8
 javac.target: 1.8
+-runee: JavaSE-1.8
+-runfw: org.apache.felix.framework;version='[4,5)'

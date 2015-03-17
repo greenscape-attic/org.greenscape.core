@@ -23,7 +23,7 @@ public class OrganizationTest extends TestCase {
 		assertEquals(true, entity2.isActive().booleanValue() == entity1.isActive().booleanValue());
 		assertEquals(true, entity2.getCreatedDate().getTime() == entity1.getCreatedDate().getTime());
 		assertEquals(true, entity2.getHomeURL().equals(entity1.getHomeURL()));
-		assertEquals(true, entity2.getModelId() == null);
+		assertEquals(true, entity2.getModelId().equals("1"));
 		assertEquals(true, entity2.getLogoId().intValue() == entity1.getLogoId().intValue());
 		assertEquals(true, entity2.getMaxUsers().intValue() == entity1.getMaxUsers().intValue());
 		assertEquals(true, entity2.getModifiedDate().getTime() == entity1.getModifiedDate().getTime());
